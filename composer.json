@@ -1,0 +1,17 @@
+{
+  "name": "baestero/praticando-php",
+  "description": "Praticando POO com PHP",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Baestero\\CursoPooPhp\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "baestero",
+      "email": "leonardobaestero@gmail.com"
+    }
+  ],
+  "require": {}
+}
