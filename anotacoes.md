@@ -14,3 +14,6 @@ composer init - configurar projeto como um package.json em projetos NODE
 
 - arrays
 - objetos
+
+4. $this, é utilizado em conceito onde não são estático
+5. $self, é utlizado em constantes e conceitos estáticos, ex: constantes
