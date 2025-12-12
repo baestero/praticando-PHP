@@ -3,6 +3,9 @@
 declare (strict_types=1);
 // Tipagem forte
 
+namespace Baestero\PraticandoPhp\Aula002_Construct;
+
+
 class PessoaFisica //Classe
 {
   //Proriedades

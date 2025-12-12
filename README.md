@@ -4,16 +4,24 @@ Repositório criado para prática de Programação Orientada a Objetos (POO) com
 
 ## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido para praticar conceitos de Programação Orientada a Objetos em PHP, incluindo classes, propriedades, métodos e encapsulamento.
+Este projeto foi desenvolvido para praticar conceitos de Programação Orientada a Objetos em PHP. Cada pasta dentro de `src/` representa uma aula diferente, contendo exemplos práticos e exercícios relacionados ao tópico estudado.
 
 ## 🚀 Estrutura do Projeto
 
 ```
 praticando-PHP/
 ├── src/
-│   └── 001 - Classes/
-│       └── PessoaFisica.php    # Classe exemplo de Pessoa Física
-├── app.php                      # Arquivo principal de demonstração
+│   ├── Aula001_Classe/
+│   │   ├── app.php              # Exemplo da aula 001
+│   │   └── PessoaFisica.php     # Classe da aula 001
+│   ├── Aula002_Construct/
+│   │   ├── app.php              # Exemplo da aula 002
+│   │   └── PessoaFisica.php     # Classe da aula 002
+│   ├── Aula003_Heranca/
+│   │   ├── PessoaFisica.php     # Classe base da aula 003
+│   │   └── PessoaJuridica.php   # Classe que estende PessoaFisica
+│   └── ...
+├── app.php                      # Arquivo para executar as aulas
 ├── composer.json                # Configuração do Composer
 ├── anotacoes.md                 # Anotações e dicas sobre PHP
 └── vendor/                      # Dependências do Composer
@@ -37,56 +45,105 @@ cd praticando-PHP
 composer install
 ```
 
-## 💻 Uso
+## 💻 Como Executar as Aulas
 
-Execute o arquivo principal para ver a demonstração:
+Cada aula possui seu próprio arquivo `app.php` dentro da pasta correspondente. Para executar uma aula específica, você tem duas opções:
 
+### Opção 1: Copiar o conteúdo do app.php da aula para o app.php da raiz
+
+1. Abra o arquivo `app.php` da pasta da aula que deseja executar (ex: `src/Aula001_Classe/app.php`)
+2. Copie todo o conteúdo desse arquivo
+3. Cole o conteúdo no arquivo `app.php` da raiz do projeto (substituindo o conteúdo anterior)
+4. Execute o arquivo:
 ```bash
 php app.php
 ```
 
-### Exemplo de Uso
+### Opção 2: Executar diretamente o app.php da pasta da aula
 
-O arquivo `app.php` demonstra como utilizar a classe `PessoaFisica`:
+Execute diretamente o arquivo `app.php` da pasta da aula desejada:
 
-```php
-$pessoaFisica = new PessoaFisica();
-$pessoaFisica->setNome("Baestero");
-$pessoaFisica->setEmail("Baestero@email.com");
-$pessoaFisica->setCpf("4875874874574");
-$pessoaFisica->setTelefone("1195587458");
-$pessoaFisica->setIdade(27);
+```bash
+php src/Aula001_Classe/app.php
 ```
 
-## 📚 Conceitos Praticados
+ou
 
-- **Classes e Objetos**: Criação de classes e instanciação de objetos
-- **Encapsulamento**: Uso de propriedades privadas e métodos públicos
-- **Métodos Setters**: Métodos para definir valores das propriedades
-- **Tipagem Forte**: Uso de `declare(strict_types=1)` e tipagem de parâmetros
-- **PSR-4 Autoloading**: Configuração de autoload com Composer
+```bash
+php src/Aula002_Construct/app.php
+```
 
-## 📝 Classes Disponíveis
+## 📚 Aulas Disponíveis
 
-### PessoaFisica
+### Aula 001 - POO: Classes, Atributos e Métodos
 
-Classe que representa uma pessoa física com as seguintes propriedades:
-- `nome` (string)
-- `email` (string)
-- `telefone` (string)
-- `cpf` (string)
-- `idade` (int)
+**Localização:** `src/Aula001_Classe/`
 
-**Métodos disponíveis:**
-- `setNome(string $nome): void`
-- `setEmail(string $email): void`
-- `setTelefone(string $telefone): void`
-- `setCpf(string $cpf): void`
-- `setIdade(int $idade): void`
+**Conceitos abordados:**
+- Criação de classes
+- Propriedades (atributos) privadas
+- Métodos setters
+- Tipagem forte com `declare(strict_types=1)`
+- Instanciação de objetos
+
+**Para executar:**
+```bash
+# Opção 1: Copie o conteúdo de src/Aula001_Classe/app.php para app.php na raiz
+php app.php
+
+# Opção 2: Execute diretamente
+php src/Aula001_Classe/app.php
+```
+
+### Aula 002 - $this, self e __construct
+
+**Localização:** `src/Aula002_Construct/`
+
+**Conceitos abordados:**
+- Método construtor `__construct()`
+- Uso de `$this` para acessar propriedades e métodos da instância
+- Uso de `self` para acessar constantes da classe
+- Definição de constantes de classe
+- Passagem de parâmetros no construtor
+
+**Para executar:**
+```bash
+# Opção 1: Copie o conteúdo de src/Aula002_Construct/app.php para app.php na raiz
+php app.php
+
+# Opção 2: Execute diretamente
+php src/Aula002_Construct/app.php
+```
+
+### Aula 003 - Herança
+
+**Localização:** `src/Aula003_Heranca/`
+
+**Conceitos abordados:**
+- Herança de classes usando `extends`
+- Reutilização de código (princípio DRY - Don't Repeat Yourself)
+- Classe base (parent) e classe derivada (child)
+- Herança de propriedades e métodos públicos
+- Estrutura de classes relacionadas (PessoaFisica e PessoaJuridica)
+
+**Arquivos:**
+- `PessoaFisica.php` - Classe base com propriedades e métodos
+- `PessoaJuridica.php` - Classe que estende PessoaFisica
+
+**Para executar:**
+```bash
+# Crie um arquivo app.php na pasta Aula003_Heranca ou execute via arquivo da raiz
+# Exemplo de uso:
+# - Instanciar PessoaJuridica que herda de PessoaFisica
+# - Acessar propriedades e métodos herdados
+```
 
 ## 📖 Anotações
 
-Consulte o arquivo `anotacoes.md` para dicas e comandos úteis sobre PHP.
+Consulte o arquivo `anotacoes.md` para dicas e comandos úteis sobre PHP, incluindo:
+- Como iniciar um projeto PHP com Composer
+- Declaração de variáveis
+- Comandos úteis: `echo`, `var_dump()`, `print_r()`
 
 ## 👤 Autor
 

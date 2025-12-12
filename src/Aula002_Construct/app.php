@@ -1,8 +1,8 @@
 <?php
 
-$AULA = "002-this-self-construct";
+require __DIR__ . '/vendor/autoload.php';
 
-require_once __DIR__ . "/src/$AULA/PessoaFisica.php";
+use Baestero\PraticandoPhp\Aula002_Construct\PessoaFisica;
 
 //Remoção do metodo set passando as props como argumentos
 

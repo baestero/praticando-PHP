@@ -4,7 +4,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Baestero\\CursoPooPhp\\": "src/"
+      "Baestero\\PraticandoPhp\\": "src/"
     }
   },
   "authors": [
@@ -13,5 +13,7 @@
       "email": "leonardobaestero@gmail.com"
     }
   ],
-  "require": {}
+  "require": {
+    "symfony/var-dumper": "^6.4"
+  }
 }

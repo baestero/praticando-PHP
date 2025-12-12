@@ -1,24 +1,30 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
 
-$AULA = "002-this-self-construct";
+use Baestero\PraticandoPhp\Aula003_Heranca\PessoaFisica;
+use Baestero\PraticandoPhp\Aula003_Heranca\PessoaJuridica;
 
-require_once __DIR__ . "/src/$AULA/PessoaFisica.php";
+$baestero = new PessoaFisica;
+$baestero->nome = "Leonardo Baestero";
+$baestero->idade = 27;
+$baestero->genero = "masculino";
 
-//Remoção do metodo set passando as props como argumentos
+$mob2you = new PessoaJuridica;
+$mob2you->nome = "Mob2you Tecnologia LTDA";
+$mob2you->idade = 20;
+$mob2you->genero = "N/A";
 
-$baestero = new PessoaFisica(
-nome: "Baestero",
-email: "Baestero@email.com", 
-telefone: "1195587458", 
-cpf: "4875874874574", 
-idade: 27
-);
+dump($baestero);
+dump($mob2you);
+dump($mob2you->showName());
 
-var_dump(value: $baestero);
-print_r($baestero);
+if($mob2you instanceof PessoaFisica)
+{
+  dump("É pessoa fisica também");
+} else 
+{
+  dump('Não é pessoa fisica');
+  
+}
 
-var_dump($baestero->getInformation());
-//string(21) "Baestero - Ser humano"
-
-//chamando uma constante
-//var_dump(PessoaFisica::OBJECT_TYPE);
+//Se Pessoa Juridica é um extend de Pessoa Fisica, logo mob2you é uma instancia tanto de Pessoa Fisica, como Juridica

@@ -1,8 +1,8 @@
 <?php
 
-$AULA = "001-poo-classes-atributos-metodos";
+require __DIR__ . '/vendor/autoload.php';
 
-require_once __DIR__ . "/src/$AULA/PessoaFisica.php";
+use Baestero\PraticandoPhp\Aula001_Classe\PessoaFisica;
 
 
 $baestero = new PessoaFisica();

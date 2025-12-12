@@ -17,3 +17,15 @@ composer init - configurar projeto como um package.json em projetos NODE
 
 4. $this, é utilizado em conceito onde não são estático
 5. $self, é utlizado em constantes e conceitos estáticos, ex: constantes
+6. composer dumpautoload -o (comando para atualizar o autoload)
+
+# Anotações
+
+1. Instancia é um objeto criado apartir de uma classe, ex: new Instancia.
+2. Extend é uma Heranca classe que herda atributos e metodos da outra.
+
+- atributo: é uma caracteristica do objeto.
+- metodo: é uma função dentro da classe, algo que o objeto faz.
+
+3. Classe filha, é a que usa o extends.
+4. Classe pai é a que é herdada.
