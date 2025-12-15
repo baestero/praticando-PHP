@@ -29,3 +29,27 @@ composer init - configurar projeto como um package.json em projetos NODE
 
 3. Classe filha, é a que usa o extends.
 4. Classe pai é a que é herdada.
+
+5. No conceito de classe abstrata, como temos uma classe PessoaFisica e PessoaJuridica, a idéia é usar uma Classe Abstrata que tenham ambas propriedades e cada uma utilize somente a sua. No caso seria a Classe "Pessoa".
+
+6. Classes abstratas não podem ser instanciadas com "new".
+
+Se muda só o valor → construtor
+Se muda a regra → polimorfismo
+Se muda com frequência → estratégia (interface)
+
+Método abstrato define OBRIGAÇÃO.
+Método concreto define IMPLEMENTAÇÃO.
+
+Você não precisa declarar como abstrato quando:
+
+- o método é opcional
+- nem todas as subclasses fazem sentido
+- não é regra do domínio
+
+Se TODO filho precisa do método → abstrato
+
+- Se SÓ ALGUNS filhos precisam → não abstrato
+- Se o comportamento muda → polimorfismo
+
+7. Polimorfismo = mesma mensagem, comportamentos diferentes

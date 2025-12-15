@@ -1,5 +1,7 @@
 <?php
 
+declare (strict_types=1);
+
 namespace Baestero\PraticandoPhp\Aula003_Heranca;
 
 class PessoaFisica

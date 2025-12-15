@@ -20,6 +20,10 @@ praticando-PHP/
 │   ├── Aula003_Heranca/
 │   │   ├── PessoaFisica.php     # Classe base da aula 003
 │   │   └── PessoaJuridica.php   # Classe que estende PessoaFisica
+│   ├── Aula004_ClasseAbstrata/
+│   │   ├── Pessoa.php           # Classe abstrata base
+│   │   ├── PessoaFisica.php     # Implementa método abstrato para CPF
+│   │   └── PessoaJuridica.php   # Implementa método abstrato para CNPJ
 │   └── ...
 ├── app.php                      # Arquivo para executar as aulas
 ├── composer.json                # Configuração do Composer
@@ -136,6 +140,28 @@ php src/Aula002_Construct/app.php
 # Exemplo de uso:
 # - Instanciar PessoaJuridica que herda de PessoaFisica
 # - Acessar propriedades e métodos herdados
+```
+
+### Aula 004 - Classe Abstrata e Polimorfismo
+
+**Localização:** `src/Aula004_ClasseAbstrata/`
+
+**Conceitos abordados:**
+- Classe abstrata como modelo base (`Pessoa`)
+- Métodos abstratos (`getDocument()`) que obrigam implementação nas classes filhas
+- Implementação específica em cada classe concreta (`PessoaFisica` e `PessoaJuridica`)
+- Polimorfismo: mesma interface (`getDocument()`) com comportamentos diferentes (CPF/CNPJ)
+- Reutilização de código com herança e respeito ao princípio DRY
+
+**Arquivos:**
+- `Pessoa.php` - Classe abstrata com propriedade `nome` e método abstrato `getDocument()`
+- `PessoaFisica.php` - Implementa `getDocument()` retornando o `cpf`
+- `PessoaJuridica.php` - Implementa `getDocument()` retornando o `cnpj`
+
+**Para executar (exemplo de uso):**
+```bash
+# Você pode criar um app.php que receba um array de Pessoas (PessoaFisica e PessoaJuridica)
+# e chame o método getDocument() para cada uma, demonstrando o polimorfismo.
 ```
 
 ## 📖 Anotações
