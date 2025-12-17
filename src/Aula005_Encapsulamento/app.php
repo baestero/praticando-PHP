@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 use Baestero\PraticandoPhp\Aula005_Encapsulamento\PessoaFisica;
 use Baestero\PraticandoPhp\Aula005_Encapsulamento\PessoaJuridica;

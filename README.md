@@ -18,12 +18,20 @@ praticando-PHP/
 │   │   ├── app.php              # Exemplo da aula 002
 │   │   └── PessoaFisica.php     # Classe da aula 002
 │   ├── Aula003_Heranca/
+│   │   ├── app.php              # Exemplo da aula 003
 │   │   ├── PessoaFisica.php     # Classe base da aula 003
 │   │   └── PessoaJuridica.php   # Classe que estende PessoaFisica
 │   ├── Aula004_ClasseAbstrata/
+│   │   ├── app.php              # Exemplo da aula 004
 │   │   ├── Pessoa.php           # Classe abstrata base
 │   │   ├── PessoaFisica.php     # Implementa método abstrato para CPF
 │   │   └── PessoaJuridica.php   # Implementa método abstrato para CNPJ
+│   ├── Aula005_Encapsulamento/
+│   │   ├── app.php              # Exemplo da aula 005
+│   │   ├── Pessoa.php           # Classe abstrata base
+│   │   ├── PessoaFisica.php     # Exemplo de visibilidade (private/protected)
+│   │   ├── PessoaEstrangeira.php# Exemplo de acesso via métodos públicos
+│   │   └── PessoaJuridica.php   # Implementa documento (CNPJ)
 │   └── ...
 ├── app.php                      # Arquivo para executar as aulas
 ├── composer.json                # Configuração do Composer
@@ -75,6 +83,18 @@ ou
 
 ```bash
 php src/Aula002_Construct/app.php
+```
+
+ou
+
+```bash
+php src/Aula003_Heranca/app.php
+```
+
+ou
+
+```bash
+php src/Aula005_Encapsulamento/app.php
 ```
 
 ## 📚 Aulas Disponíveis
@@ -136,10 +156,11 @@ php src/Aula002_Construct/app.php
 
 **Para executar:**
 ```bash
-# Crie um arquivo app.php na pasta Aula003_Heranca ou execute via arquivo da raiz
-# Exemplo de uso:
-# - Instanciar PessoaJuridica que herda de PessoaFisica
-# - Acessar propriedades e métodos herdados
+# Opção 1: Copie o conteúdo de src/Aula003_Heranca/app.php para app.php na raiz
+php app.php
+
+# Opção 2: Execute diretamente
+php src/Aula003_Heranca/app.php
 ```
 
 ### Aula 004 - Classe Abstrata e Polimorfismo
@@ -162,6 +183,25 @@ php src/Aula002_Construct/app.php
 ```bash
 # Você pode criar um app.php que receba um array de Pessoas (PessoaFisica e PessoaJuridica)
 # e chame o método getDocument() para cada uma, demonstrando o polimorfismo.
+```
+
+### Aula 005 - Encapsulamento (public, protected e private)
+
+**Localização:** `src/Aula005_Encapsulamento/`
+
+**Conceitos abordados:**
+- Encapsulamento e visibilidade de membros (`public`, `protected`, `private`)
+- Acesso controlado a dados usando métodos públicos (ex.: `setCpf()`)
+- Diferença entre o que pode ser acessado pela instância vs. pela herança
+- Exemplo de “expor” um dado protegido via método público (ex.: `returnDocument()`)
+
+**Para executar:**
+```bash
+# Opção 1: Copie o conteúdo de src/Aula005_Encapsulamento/app.php para app.php na raiz
+php app.php
+
+# Opção 2: Execute diretamente
+php src/Aula005_Encapsulamento/app.php
 ```
 
 ## 📖 Anotações
