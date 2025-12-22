@@ -162,9 +162,6 @@ Você **não precisa declarar um método como abstrato quando**:
 7. **Polimorfismo**
    Mesma mensagem, comportamentos diferentes.
 
-Claro 👍
-Vou **adicionar `private` mantendo exatamente o seu padrão**, só expandindo onde precisa.
-
 ---
 
 8. **Visibilidade `public`**
@@ -192,9 +189,6 @@ Vou **adicionar `private` mantendo exatamente o seu padrão**, só expandindo on
     Propriedades e métodos `public` podem ser acessados a partir de uma instância criada com `new`.
     Propriedades `protected` e `private` **não podem ser acessadas diretamente**, apenas através de métodos públicos da própria classe.
 
-Perfeito 👍
-Vou **reescrever o item 12 no mesmo padrão e linguagem dos anteriores**, mantendo clareza e consistência:
-
 ---
 
 12. **Manipulação via métodos públicos**
@@ -209,16 +203,33 @@ Vou **reescrever o item 12 no mesmo padrão e linguagem dos anteriores**, manten
 
 ---
 
-Perfeito 👌
-Segue o item **logo abaixo do 12**, no **mesmo padrão**, bem **resumido e técnico**:
-
----
-
 13. **Encapsulamento**
     Encapsulamento é o princípio da POO que **protege o estado e o comportamento interno de uma classe**, permitindo que propriedades e métodos `private` ou `protected` sejam acessados **apenas de forma controlada**, por meio de **métodos `public`**.
 
 ✔ Garante controle de acesso
 ✔ Protege regras internas
 ✔ Expõe apenas o necessário para uso externo
+
+---
+
+14. **Interface**
+
+Uma **interface** é um contrato da POO **composto apenas por métodos públicos** (sem implementação).
+
+✔ Define **o que** uma classe deve fazer
+✔ Não define **como** será feito
+✔ Não possui atributos de instância (apenas constantes, se houver)
+✔ Todos os métodos são **implicitamente públicos**
+
+---
+
+15. **Implementação de Interface**
+
+Trabalhar com **interfaces** significa **declarar quais métodos devem existir** e **obrigar** as classes que implementam essa interface a **fornecer a implementação desses métodos**.
+
+✔ Garante padronização entre classes
+✔ Força a implementação de comportamentos específicos
+✔ Permite polimorfismo
+✔ Facilita manutenção, testes e desacoplamento do código
 
 ---

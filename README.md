@@ -32,6 +32,14 @@ praticando-PHP/
 │   │   ├── PessoaFisica.php     # Exemplo de visibilidade (private/protected)
 │   │   ├── PessoaEstrangeira.php# Exemplo de acesso via métodos públicos
 │   │   └── PessoaJuridica.php   # Implementa documento (CNPJ)
+│   ├── Aula006_Interfaces/
+│   │   ├── app.php              # Exemplo da aula 006
+│   │   ├── Pessoa.php           # Classe abstrata base
+│   │   ├── PessoaFisicaInterface.php # Interface que define contrato para CPF
+│   │   ├── PessoaJuridicaInterface.php # Interface que define contrato para CNPJ
+│   │   ├── PessoaFisica.php     # Implementa PessoaFisicaInterface
+│   │   ├── PessoaJuridica.php   # Implementa PessoaJuridicaInterface
+│   │   └── PessoaEstrangeira.php# Exemplo adicional
 │   └── ...
 ├── app.php                      # Arquivo para executar as aulas
 ├── composer.json                # Configuração do Composer
@@ -95,6 +103,12 @@ ou
 
 ```bash
 php src/Aula005_Encapsulamento/app.php
+```
+
+ou
+
+```bash
+php src/Aula006_Interfaces/app.php
 ```
 
 ## 📚 Aulas Disponíveis
@@ -193,7 +207,7 @@ php src/Aula003_Heranca/app.php
 - Encapsulamento e visibilidade de membros (`public`, `protected`, `private`)
 - Acesso controlado a dados usando métodos públicos (ex.: `setCpf()`)
 - Diferença entre o que pode ser acessado pela instância vs. pela herança
-- Exemplo de “expor” um dado protegido via método público (ex.: `returnDocument()`)
+- Exemplo de "expor" um dado protegido via método público (ex.: `returnDocument()`)
 
 **Para executar:**
 ```bash
@@ -202,6 +216,35 @@ php app.php
 
 # Opção 2: Execute diretamente
 php src/Aula005_Encapsulamento/app.php
+```
+
+### Aula 006 - Interfaces
+
+**Localização:** `src/Aula006_Interfaces/`
+
+**Conceitos abordados:**
+- Interfaces como contratos que definem métodos obrigatórios
+- Implementação de interfaces usando `implements`
+- Métodos em interfaces sempre são públicos
+- Classes podem implementar múltiplas interfaces
+- Separação de contrato (interface) da implementação (classe)
+- Uso de interfaces para garantir que classes implementem métodos específicos
+
+**Arquivos:**
+- `PessoaFisicaInterface.php` - Interface que define o contrato `getCpf(): string`
+- `PessoaJuridicaInterface.php` - Interface que define o contrato `getCnpj(): string`
+- `Pessoa.php` - Classe abstrata base
+- `PessoaFisica.php` - Implementa `PessoaFisicaInterface`
+- `PessoaJuridica.php` - Implementa `PessoaJuridicaInterface`
+- `PessoaEstrangeira.php` - Exemplo adicional
+
+**Para executar:**
+```bash
+# Opção 1: Copie o conteúdo de src/Aula006_Interfaces/app.php para app.php na raiz
+php app.php
+
+# Opção 2: Execute diretamente
+php src/Aula006_Interfaces/app.php
 ```
 
 ## 📖 Anotações
